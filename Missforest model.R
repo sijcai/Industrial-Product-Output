@@ -1,4 +1,3 @@
-
 # Importing R packages ----------------------------------------------------
 library(tidyverse)
 library(missRanger)
@@ -28,9 +27,8 @@ interpolate_data <- function(train_data, test_data, unobserved_data, industry_na
   ))
 }
 
-# Apply the interpolation function ----------------------------------------
+# Apply the Missforest interpolation function ----------------------------------------
 mineral_results <- interpolate_data(mineral_train, mineral_test, mineral_unobserved, "mineral")
 chemical_results <- interpolate_data(chemical_train, chemical_test, chemical_unobserved, "chemical")
 ferrous_metal_results <- interpolate_data(ferrous_metal_train, ferrous_metal_test, ferrous_metal_unobserved, "ferrous_metal")
 nonferrous_metal_results <- interpolate_data(nonferrous_metal_train, nonferrous_metal_test, nonferrous_metal_unobserved, "nonferrous_metal")
-
